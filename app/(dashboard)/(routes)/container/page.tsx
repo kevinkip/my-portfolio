@@ -1,7 +1,6 @@
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import Head from 'next/head';
-import router from 'next/navigation';
 import React from 'react'
 
 
@@ -17,7 +16,7 @@ const Container = ({
         type: "website",
         date: "right now"
     }
-    return (
+    return ( 
         <div>
           <Head>
             <title>{meta.title}</title>

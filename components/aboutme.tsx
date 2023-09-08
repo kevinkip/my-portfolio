@@ -1,10 +1,9 @@
-import React from "react";
 import userData from "@/constants/data";
+import React from "react";
 import Image from "next/image";
-import Container from "../container/page";
+import Container from "@/app/(dashboard)/(routes)/container/page";
 
-const About = () => {
-  
+const AboutMe = () => {
   return (
     <Container>
       <section className="bg-white dark:bg-gray-800">
@@ -38,14 +37,14 @@ const About = () => {
                   Contact
                 </h1>
                 <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                  If you want to reach me, just shoot me a message at{" "}
+                  For any sort help / enquiry, shoot a{" "}
                   <a
                     href={`mailto:${userData.email}`}
                     className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                   >
                     mail
                   </a>{" "}
-                  and I&apos;ll get back to you.
+                  and I&apos;ll get back. I swear.
                 </p>
               </div>
               <div className="mt-8">
@@ -70,18 +69,6 @@ const About = () => {
                 Social Links
               </h1>
               <div className="mt-4 ml-4">
-                {/* <div className="flex flex-row justify-start items-center ">
-                <a
-                  href={userData.socialLinks.peerlist}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    Peerlist
-                  </div>
-                </a>
-              </div> */}
                 <div className="flex flex-row justify-start items-center ">
                   <a
                     href={userData.socialLinks.facebook}
@@ -163,85 +150,61 @@ const About = () => {
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
                 <Image
                   src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"
                   className="h-20 w-20 mx-4 my-4"
                   alt={""}
-                  width={20}
-                  height={20}
                 />
               </div>
             </div>
@@ -249,8 +212,7 @@ const About = () => {
         </div>
       </section>
     </Container>
-
   );
 };
 
-export default About;
+export default AboutMe;
