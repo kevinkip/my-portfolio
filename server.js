@@ -1,37 +1,38 @@
 const express = require('express')
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+const cors = require('cors');
+require('dotenv').config();
+const sgMail = require('@sendgrid/mail');
 
 const app = express();
-app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
 
-const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD
-    },
-    port: 465,
-    host: "smtp.gmail.com"
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+const TO_EMAIL = process.env.TO_EMAIL ?? 'default@gmail.com';
+const FROM_EMAIL = process.env.FROM_EMAIL ?? 'default@gmail.com';
+
+app.use(express.json());
+
+app.post('/send-email', async (req, res) => {
+    const { email, message } = req.body;
+    const msg = {
+        to: TO_EMAIL,
+        from: FROM_EMAIL,
+        subject: 'Mail from ' + email,
+        text: message,
+        html: message,
+    };
+    try {
+        await sgMail.send(msg);
+        res.status(200).send('Email sent successfully');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error sending email');
+    }
 });
 
-contactEmail.verify((error) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log("Ready to Send");
-    }
-})
+app.use(cors());
 
-// router.post("/contact", (req, res) => {
-//     const name = req.body.name;
-//     const email = req.body.email;
-//     const message = req.body.message;
-//     const mail = {
-//         from 
-//     }
-// })
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+})

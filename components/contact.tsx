@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import userData from '@/constants/data';
 import Container from '@/app/(dashboard)/(routes)/container/page';
-import axios from 'axios';
 
 const Contact = () => {
   const [status, setStatus] = useState("Submit");
@@ -20,7 +19,7 @@ const Contact = () => {
       message: message.value,
     };
 
-    let response = await fetch("http://localhost:3000/contact", {
+    let response = await fetch("http://localhost:3000/contact/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -200,6 +199,7 @@ const Contact = () => {
               name="message"
             ></textarea>
             <button
+            disabled={status === "Sending..."} //disables button when sending
               type="submit"
               className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >

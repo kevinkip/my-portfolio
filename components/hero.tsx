@@ -49,7 +49,7 @@ export default function Hero() {
             width={400}
             height={400}
             priority={true}
-            className="shadow"
+            className="shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl"
           />
           <div className="flex flex-row justify-between mt-4">
             <div className="flex flex-row space-x-4">
