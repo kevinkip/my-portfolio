@@ -37,19 +37,19 @@ const FavoriteProjects = () => {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
           {/* Single card */}
           <a
-            href="https://tailwindmasterkit.com"
+            href="https://kevinbnb-kevinkip.vercel.app/"
             className="w-full block col-span-3 shadow-2xl"
           >
             <div className="relative overflow-hidden">
               <Image
-              width={10}
-              height={10}
-                src="/tmk.jpg"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
+              width={1200}
+              height={600}
+                src="/kevinbnb.png"
+                alt="kevinbnb"
+                className="transform hover:scale-105 transition duration-2000 ease-in-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Tailwind Master Kit
+                Kevinbnb
               </h1>
               <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
                 01
@@ -58,20 +58,20 @@ const FavoriteProjects = () => {
           </a>
           {/* Single card */}
           <a
-            href="https://placeholdertech.in"
+            href="https://sassy-p16of0z2v-kevinkip.vercel.app/"
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
           >
             <div className="relative overflow-hidden">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <Image
-              width={10}
-              height={10}
-                src="/placeholdertech.png"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
+              width={2664}
+              height={1274}
+                src="/sass-ai-pic.png"
+                alt="sassyai"
+                className="transform hover:scale-105 transition duration-2000 ease-in-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                PlaceholderTech
+                Sassy AI
               </h1>
               <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
                 02
@@ -80,20 +80,20 @@ const FavoriteProjects = () => {
           </a>
           {/* Single card */}
           <a
-            href="https://manuarora.in"
+            href="https://technologynotes.onrender.com/"
             className="w-full block col-span-3 sm:col-span-1  object-cover"
           >
             <div className="relative overflow-hidden shadow-2xl">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <Image
-              width={10}
-              height={10}
-                src="/portfolio.png"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
+              width={1886}
+              height={1326}
+                src="/Dan-Repairs.png"
+                alt="repair shop"
+                className="transform hover:scale-105 transition duration-2000 ease-in-out object-cover shadow-2xl"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Portfolio
+                Dan D. Repair Shop
               </h1>
               <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
                 03

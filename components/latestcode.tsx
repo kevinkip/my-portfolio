@@ -1,14 +1,29 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import getLatestRepos from "../lib/getLatestRepos";
 import userData from "@/constants/data";
 import GithubRepoCard from "./githubrepocard";
+import axios from "axios";
 
 
-const LatestCode = ({ repositories }) => {
-  const [repos, setRepos] = useState(repositories);
+const LatestCode = () => {
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    const username = userData.githubUsername;
+    const count = 6;
+
+    axios.get(`https://api.github.com/users/${username}/repos?sort=created&per_page=${count}`)
+    .then(response => {
+      setRepos(response.data);
+      console.log(response.data)
+    })
+    .catch(error => {
+      console.error(error)
+    });
+
+  }, [setRepos]);
+
   return (
     <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
       <div className="max-w-6xl mx-auto">
@@ -44,8 +59,8 @@ const LatestCode = ({ repositories }) => {
         {/* Single github Repo */}
 
         {repos &&
-          repos.map((repositories, idx) => (
-            <GithubRepoCard latestRepo={repositories} key="idx" />
+          repos.map((repository, idx) => (
+            <GithubRepoCard latestRepo={repository} key={idx} />
           ))}
       </div>
     </section>

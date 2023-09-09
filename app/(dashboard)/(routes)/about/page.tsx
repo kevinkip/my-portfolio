@@ -4,7 +4,6 @@ import Image from "next/image";
 import Container from "../container/page";
 
 const About = () => {
-  
   return (
     <Container>
       <section className="bg-white dark:bg-gray-800">
@@ -19,7 +18,7 @@ const About = () => {
               className="leading-loose text-2xl md:text-4xl font-semibold  mx-4"
               style={{ lineHeight: "3rem" }}
             >
-              {userData.about.title}. Currently working on{" "}
+              {userData.about.title} I&apos;m currently working on{" "}
               <a
                 className="bg-red-500 rounded-md px-2 py-1 text-white"
                 href={userData.about.currentProjectUrl}
@@ -38,23 +37,23 @@ const About = () => {
                   Contact
                 </h1>
                 <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                  If you want to reach me, just shoot me a message at{" "}
+                  If you want to reach me, just shoot me a{" "}
                   <a
                     href={`mailto:${userData.email}`}
                     className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                   >
-                    mail
+                    message
                   </a>{" "}
                   and I&apos;ll get back to you.
                 </p>
               </div>
               <div className="mt-8">
                 <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                  Job Opportunities
+                  Opportunities
                 </h1>
                 <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                  I&apos;m looking for a job currently, If you see me as a good
-                  fit, check my{" "}
+                  I&apos;m open to collaborating with new and exciting projects.
+                  Check out my{" "}
                   <a
                     href={userData.resumeUrl}
                     target="__blank"
@@ -62,7 +61,8 @@ const About = () => {
                   >
                     CV
                   </a>{" "}
-                  and I&apos;d love to work for you.
+                  if you&apos;d like to learn more about me (or check out the
+                  about page)
                 </p>
               </div>
               {/* Social Links */}
@@ -70,18 +70,6 @@ const About = () => {
                 Social Links
               </h1>
               <div className="mt-4 ml-4">
-                {/* <div className="flex flex-row justify-start items-center ">
-                <a
-                  href={userData.socialLinks.peerlist}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    Peerlist
-                  </div>
-                </a>
-              </div> */}
                 <div className="flex flex-row justify-start items-center ">
                   <a
                     href={userData.socialLinks.facebook}
@@ -160,88 +148,89 @@ const About = () => {
               </h1>
               <div className="flex flex-row flex-wrap mt-8">
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
+                  src="/html5.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"html5"}
+                  width={100}
+                  height={100}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png"
+                  src="/css3.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"css3"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"
+                  src="/javascript.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"javascript"}
+                  width={100}
+                  height={100}
+                />
+
+                <Image
+                  src="/angular.png"
+                  className="h-20 w-20 mx-4 my-4"
+                  alt={"angular"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
+                  src="/react.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"react"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
+                  src="/nodejs.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"node"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"
+                  src="/webflow.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"webflow"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"
+                  src="/mongodb.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"mongodb"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
+                  src="/postgresql.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"postgresql"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
+                  src="/chatgpt.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"chatgpt"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png"
+                  src="/tailwindcss.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"tailwind"}
+                  width={80}
+                  height={80}
                 />
                 <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
+                  src="/csharp.png"
                   className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
-                />
-                <Image
-                  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"
-                  className="h-20 w-20 mx-4 my-4"
-                  alt={""}
-                  width={20}
-                  height={20}
+                  alt={"c#"}
+                  width={80}
+                  height={80}
                 />
               </div>
             </div>
@@ -249,7 +238,6 @@ const About = () => {
         </div>
       </section>
     </Container>
-
   );
 };
 

@@ -14,7 +14,7 @@ const Container = ({
         description: `I've been creating websites for over 4 years. Get in touch to learn more`,
         image: "/avatar.png",
         type: "website",
-        date: "right now"
+        date: "9/7/2023"
     }
     return ( 
         <div>
