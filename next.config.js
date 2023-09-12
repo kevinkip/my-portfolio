@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    async rewrites(){
+        return [
+            {
+                source: '/sitemap.xml',
+                destination: '/api/sitemap'
+            }
+        ]
+    },
     images: {
         domains: [
             "raw.githubusercontent.com"
@@ -7,7 +15,7 @@ const nextConfig = {
     },
     compiler: {
         styledComponents: true
-    }
+    },
 }
 
 module.exports = nextConfig
