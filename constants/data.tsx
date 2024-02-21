@@ -83,7 +83,7 @@ const userData = {
       twitter: "https://twitter.com/kipl33",
       linkedin: "https://www.linkedin.com/in/callhimkev/",
       github: "https://github.com/kevinkip",
-      facebook: "https://www.facebook.com/Dr.KipkemboiMD/",
+      facebook: "https://www.facebook.com/callhimkev/",
     },
   };
   
